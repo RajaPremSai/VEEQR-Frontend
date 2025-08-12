@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../state/AuthContext'
 
 export default function Login() {
@@ -48,6 +48,10 @@ export default function Login() {
         </div>
         <div className="card">
           <p>Tip: Use your role credentials. Manager default: manager@example.edu / StrongPass@123</p>
+          <div style={{ marginTop: 8 }}>
+            <span>New user?</span>
+            <Link to="/signup" className="btn secondary" style={{ padding: '6px 10px', marginLeft: 8 }}>Create an account</Link>
+          </div>
         </div>
       </div>
     </div>

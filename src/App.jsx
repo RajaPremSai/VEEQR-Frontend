@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/Login'
+import Signup from './pages/Signup'
 import { useAuth } from './state/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import UserPortal from './portals/UserPortal'
@@ -21,6 +22,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={roleHome()} />
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
 
       <Route element={<ProtectedRoute allowedRoles={[ 'USER' ]} />}> 
         <Route path="/user/*" element={<UserPortal />} />
